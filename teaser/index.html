@@ -127,20 +127,26 @@
 
       /* ---------- info (where & when) ---------- */
       .info-head {
-        z-index: 21; position: absolute; inset: auto; left: 120px; top: 520px; width: auto; height: auto;
-        font-family: var(--caps); font-size: 36px; letter-spacing: 0.4em; color: var(--gold);
+        z-index: 21; position: absolute; inset: auto; left: 110px; top: 250px; width: auto; height: auto;
+        font-family: var(--caps); font-weight: 700; font-size: 38px; letter-spacing: 0.32em; color: var(--gold);
+        text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+      }
+      .info-title {
+        z-index: 21; position: absolute; inset: auto; left: 110px; top: 305px; width: auto; height: auto;
+        font-family: var(--serif); font-weight: 600; font-size: 84px; line-height: 1.05; color: var(--cream);
+        text-shadow: 0 4px 24px rgba(0,0,0,0.6);
       }
       .info-card {
-        z-index: 21; position: absolute; inset: auto; left: 120px; width: 1040px; height: 140px;
-        display: flex; align-items: center; gap: 34px; padding: 0 44px;
-        background: rgba(15, 31, 61, 0.82); border: 2px solid rgba(244,236,220,0.5); border-radius: 80px;
+        z-index: 21; position: absolute; inset: auto; left: 110px; width: 1160px; height: 160px;
+        display: flex; align-items: center; gap: 36px; padding: 0 48px;
+        background: rgba(12, 25, 50, 0.93); border: 2px solid rgba(244,236,220,0.5); border-radius: 80px;
         color: var(--cream); backdrop-filter: blur(6px);
       }
-      .info-card svg { width: 64px; height: 64px; flex: none; }
+      .info-card svg { width: 72px; height: 72px; flex: none; }
       .info-card svg * { fill: none; stroke: var(--gold); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
       .info-card .div { width: 2px; height: 70px; background: rgba(244,236,220,0.4); flex: none; }
-      .info-card .t1 { font-family: var(--caps); font-weight: 700; font-size: 40px; letter-spacing: 0.04em; line-height: 1.15; }
-      .info-card .t2 { font-family: var(--sans); font-weight: 500; font-size: 30px; letter-spacing: 0.06em; opacity: 0.85; }
+      .info-card .t1 { font-family: var(--caps); font-weight: 700; font-size: 50px; letter-spacing: 0.03em; line-height: 1.15; }
+      .info-card .t2 { font-family: var(--sans); font-weight: 600; font-size: 34px; letter-spacing: 0.06em; }
 
       /* ---------- end card ---------- */
       .end-stack {
@@ -151,10 +157,11 @@
       .end-stack .logo { font-family: var(--serif); font-weight: 500; font-size: 150px; line-height: 1; margin-top: 18px; }
       .end-stack .lw { font-family: var(--caps); font-size: 40px; letter-spacing: 0.55em; padding-left: 0.55em; margin-top: 18px; }
       .end-stack .cta {
-        margin-top: 54px; padding: 22px 64px; border-radius: 60px; background: var(--cream); color: var(--navy);
+        margin-top: 44px; padding: 22px 64px; border-radius: 60px; background: var(--cream); color: var(--navy);
         font-family: var(--sans); font-weight: 800; font-size: 36px; letter-spacing: 0.22em;
       }
-      .end-stack .meta { margin-top: 28px; font-family: var(--sans); font-weight: 500; font-size: 28px; letter-spacing: 0.12em; opacity: 0.85; }
+      .end-stack .when { margin-top: 40px; font-family: var(--caps); font-weight: 700; font-size: 60px; letter-spacing: 0.08em; color: var(--gold); }
+      .end-stack .meta { margin-top: 14px; font-family: var(--sans); font-weight: 600; font-size: 36px; letter-spacing: 0.08em; }
 
 
       /* ---------- layer split for CapCut export (render with --variables '{"layer":"..."}') ---------- */
@@ -163,7 +170,7 @@
       html.layer-graphics .shade-full, html.layer-graphics .title-bg { visibility: hidden !important; }
       html.layer-base .cap, html.layer-base .kinetic, html.layer-base .psst, html.layer-base .flash,
       html.layer-base .title-frame, html.layer-base .wave, html.layer-base .title-stack, html.layer-base .sparkle,
-      html.layer-base .page-wipe, html.layer-base .info-head, html.layer-base .info-card, html.layer-base .end-stack { visibility: hidden !important; }
+      html.layer-base .page-wipe, html.layer-base .info-head, html.layer-base .info-title, html.layer-base .info-card, html.layer-base .end-stack { visibility: hidden !important; }
     </style>
   </head>
   <body>
@@ -269,17 +276,18 @@
       <video id="v-walk" class="clip shot" src="assets/footage/ending.mp4" muted playsinline
              data-start="25.8" data-duration="4.8" data-media-start="3.7" data-track-index="1"></video>
       <div class="clip shade-bottom" data-start="25.8" data-duration="4.8" data-track-index="5"
-           style="background: linear-gradient(90deg, rgba(8,18,40,0.85) 0%, rgba(8,18,40,0.55) 45%, rgba(8,18,40,0) 75%);"></div>
+           style="background: linear-gradient(90deg, rgba(8,18,40,0.94) 0%, rgba(8,18,40,0.8) 45%, rgba(8,18,40,0.15) 78%, rgba(8,18,40,0) 90%);"></div>
       <div id="info-head" class="clip info-head" data-start="26.0" data-duration="4.6" data-track-index="10">WHERE &amp; WHEN</div>
-      <div id="info-loc" class="clip info-card" data-start="26.2" data-duration="4.4" data-track-index="11" style="top:600px">
+      <div id="info-title" class="clip info-title" data-start="26.0" data-duration="4.6" data-track-index="10">Beyond the Pages: Library Week</div>
+      <div id="info-loc" class="clip info-card" data-start="26.2" data-duration="4.4" data-track-index="11" style="top:470px">
         <svg viewBox="0 0 64 64"><path d="M32 58 C 32 58 12 36 12 24 A 20 20 0 0 1 52 24 C 52 36 32 58 32 58 Z"/><circle cx="32" cy="24" r="7"/></svg>
         <div class="div"></div>
         <div><div class="t1">Perpustakaan Tun Abdul Razak</div><div class="t2">KAMPUS SAMARAHAN 2</div></div>
       </div>
-      <div id="info-time" class="clip info-card" data-start="26.7" data-duration="3.9" data-track-index="11" style="top:770px; width:620px">
-        <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24"/><path d="M32 18 L32 32 L42 38"/></svg>
+      <div id="info-time" class="clip info-card" data-start="26.7" data-duration="3.9" data-track-index="11" style="top:660px; width:880px">
+        <svg viewBox="0 0 64 64"><rect x="10" y="14" width="44" height="40" rx="5"/><path d="M10 26 H54 M22 8 V18 M42 8 V18"/></svg>
         <div class="div"></div>
-        <div><div class="t1">2 – 5 PM</div><div class="t2">LIBRARY WEEK</div></div>
+        <div><div class="t1">Wednesday · 2 – 5 PM</div></div>
       </div>
 
       <!-- =========================================================
@@ -291,8 +299,9 @@
         <div class="pre" id="end-pre">Turn the page with us.</div>
         <div class="logo" id="end-logo">Beyond the Pages</div>
         <div class="lw" id="end-lw">LIBRARY WEEK</div>
+        <div class="when" id="end-when">WEDNESDAY · 2 – 5 PM</div>
+        <div class="meta" id="end-meta">PERPUSTAKAAN TUN ABDUL RAZAK · KAMPUS SAMARAHAN 2</div>
         <div class="cta" id="end-cta">SEE YOU THERE</div>
-        <div class="meta" id="end-meta">PERPUSTAKAAN TUN ABDUL RAZAK · KAMPUS SAMARAHAN 2 · 2 – 5 PM</div>
       </div>
 
       <!-- =========================================================
@@ -409,20 +418,22 @@
       // S11 where & when
       tl.fromTo("#v-walk", { scale: 1.06 }, { scale: 1.0, duration: 4.8, ease: "none" }, 25.8);
       tl.fromTo("#info-head", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 26.0);
-      tl.fromTo("#info-loc", { x: -1200 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.2);
-      tl.fromTo("#info-time", { x: -800 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.7);
+      tl.fromTo("#info-title", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 26.1);
+      tl.fromTo("#info-loc", { x: -1300 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.3);
+      tl.fromTo("#info-time", { x: -1000 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.6);
       tl.fromTo("#info-loc svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.4, ease: "power2.out" }, 26.5);
-      tl.fromTo("#info-time svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.4, ease: "power2.out" }, 27.0);
-      tl.to(["#info-head", "#info-loc", "#info-time"], { opacity: 0, x: -40, duration: 0.3, stagger: 0.05, ease: "power2.in" }, 30.15);
+      tl.fromTo("#info-time svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.4, ease: "power2.out" }, 26.9);
+      tl.to(["#info-head", "#info-title", "#info-loc", "#info-time"], { opacity: 0, x: -40, duration: 0.3, stagger: 0.05, ease: "power2.in" }, 30.15);
 
       // S12 end card
       tl.fromTo("#frame3", { scale: 1.08, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 30.6);
       tl.fromTo("#end-pre", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 30.7);
       tl.fromTo("#end-logo", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 31.0);
       tl.fromTo("#end-lw", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.8, ease: "power3.out" }, 31.3);
-      tl.fromTo("#end-cta", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }, 31.9);
-      tl.fromTo("#end-meta", { y: 20, opacity: 0 }, { y: 0, opacity: 0.85, duration: 0.5, ease: "power2.out" }, 32.3);
-      tl.to("#end", { opacity: 0, duration: 0.8, ease: "power1.in" }, 34.6);
+      tl.fromTo("#end-when", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 31.6);
+      tl.fromTo("#end-cta", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }, 32.2);
+      tl.fromTo("#end-meta", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 31.85);
+      tl.to("#end", { opacity: 0, duration: 0.5, ease: "power1.in" }, 34.9);
 
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
