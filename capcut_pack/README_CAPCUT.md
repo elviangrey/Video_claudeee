@@ -20,29 +20,59 @@ are identical.
 | `02_BASE_FOOTAGE_WITH_MOTION/` | `base_footage_full.mp4`: all footage joined, with zoom/push-in, vignette, shading and the title/end card backgrounds already in, but **no text** | **Route A**: fastest |
 | `03_GRAPHICS_OVERLAY_ALPHA/` | 10 **transparent** `.mov` files plus 2 full-screen `.mp4` cards (05, 12) (ProRes 4444 + alpha): all text, animation, title, sparkles, page-turn wipe, flash, info cards, end card | Overlay track (CapCut **desktop / PC / Mac**) |
 | `03b_GRAPHICS_GREENSCREEN/` | The same 12 overlays on a green background | Overlay track in CapCut **mobile** (use Chroma Key) |
-| `06_ELEMENTS_WHERE_WHEN/` | The three *Where & When* elements (heading, location card, time card), one transparent video each | Edit or move each element separately |
+| `07_ELEMENTS_SEPARATE/` | **Every graphic element as its own file** (45 elements: each caption, word, card, icon, sparkle, wipe, shade, background) | Build the teaser over **your own footage** and edit each element separately |
 | `04_AUDIO/` | `A1_music_bed.wav` (music), `A2_sfx_all_placed.wav` (**all SFX already at the right times**, 35.4 s), `sfx_individual/` (single SFX files) | Audio tracks |
 | `05_CAPTIONS/` | `captions.srt`, every on-screen line | If you want to retype the text in CapCut's own fonts |
 
 ---
 
-## 06_ELEMENTS_WHERE_WHEN: info elements as separate videos
+## 07_ELEMENTS_SEPARATE: every element in its own file
 
-The three graphics from the *Where & When* scene are also exported **one per file**, so you can
-move, resize, retime or reuse each one on its own in CapCut.
+Use this when you want to put the graphics over **your own footage** and edit each one on its own
+(move, resize, retime, delete, swap).
 
-| File | Element | Length | Original start |
-|---|---|---|---|
-| `A_where_when_title.mov` | "WHERE & WHEN" heading (gold) | 4.6 s | 00:26.0 |
-| `B_location_card.mov` | Pin card: Perpustakaan Tun Abdul Razak, Kampus Samarahan 2 | 4.4 s | 00:26.2 |
-| `C_time_card.mov` | Clock card: 2 – 5 PM, Library Week | 3.9 s | 00:26.7 |
+- One folder per scene (`01_hook` … `12_end_card`). Files are numbered in the order they appear.
+- **`.mov`** = transparent video with the animation built in (CapCut PC/Mac).
+  **`green/…_green.mp4`** = the same element on green, for **Chroma Key** in CapCut mobile.
+- **`.png`** = static shading layers (vignette, bottom shade, dark shade, left shade). Stretch them
+  in CapCut to the scene length.
+- **`01_background_navy.mp4`** (title and end card) = ordinary full-screen background.
+- Every file is 1920×1080 with the element **in its original position**, so stacked together at
+  the times in **`ELEMENTS_TIMELINE.csv`** they rebuild the teaser exactly.
 
-- `.mov` = transparent (CapCut PC/Mac). `_green.mp4` = green background, for Chroma Key on CapCut mobile.
-- Each file is 1920×1080 and the element sits **in its original position**, so placing them on
-  three overlay tracks at the starts above gives exactly the original scene. Drag the element in
-  the preview to move it wherever you like.
-- Each one already has its slide-in animation and fade-out built in.
-- If you use these three, **don't** also use `03_…/11_where_when.mov`, or the elements will show twice.
+### Track order in CapCut (important)
+
+In CapCut, a **higher** track covers the ones **below** it. So your footage stays on the **main
+track (bottom)** and the elements go on the overlay tracks **above** it. For each scene, from
+bottom to top:
+
+1. Your footage (main track)
+2. Shade / vignette `.png`. This darkens the footage so the text is easier to read
+3. Background graphics: dust, glow waves, border frame, sparkles, white flash
+4. Text and cards: captions, EXPLORE / DISCOVER…, Psst bubble, location and time cards, button
+5. `06_stairs/01_page_turn_wipe_transition` at the very top, so the wipe covers everything
+
+If you put an element **under** the footage, it won't be visible because the footage covers it.
+
+### Start times by scene
+
+| Scene | Start | Contents |
+|---|---|---|
+| `01_hook` | 00:00.0 | caption, dust, vignette |
+| `02_peek` | 00:03.0 | Psst bubble (00:03.3), caption, bottom shade |
+| `03_notice` | 00:05.4 | caption, bottom shade |
+| `04_poster` | 00:07.8 | vignette, white flash (00:09.9) |
+| `05_title` | 00:10.2 | navy bg, glow waves, frame, book icon, LIBRARY WEEK, headline, swoosh, sparkles |
+| `06_stairs` | 00:13.4 wipe / 00:13.8 | page-turn wipe, caption, bottom shade |
+| `07_explore` | 00:16.2 | EXPLORE, line + subtitle, dark shade |
+| `08_discover` | 00:18.6 | DISCOVER, line + subtitle, dark shade |
+| `09_get_lost` | 00:21.0 | GET LOST, line + subtitle, dark shade |
+| `10_uncover` | 00:23.4 | UNCOVER, line + subtitle, dark shade |
+| `11_where_when` | 00:25.8 | left shade, WHERE & WHEN (26.0), location card (26.2), time card (26.7) |
+| `12_end_card` | 00:30.6 | navy bg, frame, tagline, logo, LIBRARY WEEK, SEE YOU THERE button, venue line, sparkles |
+
+Exact start and end times for all 45 files are in `ELEMENTS_TIMELINE.csv` (open it in Excel).
+Don't use these files together with `03_GRAPHICS_OVERLAY_ALPHA`, or everything will appear twice.
 
 ## Route A: fastest, matches the preview exactly (about 5 minutes)
 

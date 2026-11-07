@@ -1,0 +1,46 @@
+start_s,end_s,duration_s,scene,files,type
+0.00,3.00,3.00,01_hook,01_hook/02_dust_particles.mov | 01_hook/green/02_dust_particles_green.mp4,alpha
+0.00,3.00,3.00,01_hook,01_hook/03_vignette_dark_edges.png,shade
+0.20,3.00,2.80,01_hook,01_hook/01_caption_every_page_hides_a_story.mov | 01_hook/green/01_caption_every_page_hides_a_story_green.mp4,alpha
+3.00,5.40,2.40,02_peek,02_peek/02_caption_the_library_has_a_secret.mov | 02_peek/green/02_caption_the_library_has_a_secret_green.mp4,alpha
+3.00,5.40,2.40,02_peek,02_peek/03_bottom_shade.png,shade
+3.30,5.40,2.10,02_peek,02_peek/01_psst_speech_bubble.mov | 02_peek/green/01_psst_speech_bubble_green.mp4,alpha
+5.40,7.80,2.40,03_notice,03_notice/01_caption_have_you_seen_it_yet.mov | 03_notice/green/01_caption_have_you_seen_it_yet_green.mp4,alpha
+5.40,7.80,2.40,03_notice,03_notice/02_bottom_shade.png,shade
+7.80,10.20,2.40,04_poster,04_poster/01_vignette_dark_edges.png,shade
+9.90,10.60,0.70,04_poster,04_poster/02_white_flash.mov | 04_poster/green/02_white_flash_green.mp4,alpha
+10.20,13.80,3.60,05_title,05_title/01_background_navy.mp4,opaque
+10.20,13.80,3.60,05_title,05_title/02_glow_waves.mov | 05_title/green/02_glow_waves_green.mp4,alpha
+10.20,13.80,3.60,05_title,05_title/03_border_frame.mov | 05_title/green/03_border_frame_green.mp4,alpha
+10.20,13.80,3.60,05_title,05_title/04_book_icon.mov | 05_title/green/04_book_icon_green.mp4,alpha
+10.20,13.80,3.60,05_title,05_title/05_library_week_label.mov | 05_title/green/05_library_week_label_green.mp4,alpha
+10.20,13.80,3.60,05_title,05_title/06_headline_beyond_the_pages.mov | 05_title/green/06_headline_beyond_the_pages_green.mp4,alpha
+10.20,13.80,3.60,05_title,05_title/07_underline_swoosh.mov | 05_title/green/07_underline_swoosh_green.mp4,alpha
+10.20,13.80,3.60,05_title,05_title/08_sparkles.mov | 05_title/green/08_sparkles_green.mp4,alpha
+13.40,14.25,0.85,06_stairs,06_stairs/01_page_turn_wipe_transition.mov | 06_stairs/green/01_page_turn_wipe_transition_green.mp4,alpha
+13.80,16.20,2.40,06_stairs,06_stairs/02_caption_step_inside_the_story.mov | 06_stairs/green/02_caption_step_inside_the_story_green.mp4,alpha
+13.80,16.20,2.40,06_stairs,06_stairs/03_bottom_shade.png,shade
+16.20,18.60,2.40,07_explore,07_explore/01_word_EXPLORE.mov | 07_explore/green/01_word_EXPLORE_green.mp4,alpha
+16.20,18.60,2.40,07_explore,07_explore/02_line_and_subtitle_every_shelf.mov | 07_explore/green/02_line_and_subtitle_every_shelf_green.mp4,alpha
+16.20,18.60,2.40,07_explore,07_explore/03_dark_shade.png,shade
+18.60,21.00,2.40,08_discover,08_discover/01_word_DISCOVER.mov | 08_discover/green/01_word_DISCOVER_green.mp4,alpha
+18.60,21.00,2.40,08_discover,08_discover/02_line_and_subtitle_your_next_favourite_read.mov | 08_discover/green/02_line_and_subtitle_your_next_favourite_read_green.mp4,alpha
+18.60,21.00,2.40,08_discover,08_discover/03_dark_shade.png,shade
+21.00,23.40,2.40,09_get_lost,09_get_lost/01_word_GET_LOST.mov | 09_get_lost/green/01_word_GET_LOST_green.mp4,alpha
+21.00,23.40,2.40,09_get_lost,09_get_lost/02_line_and_subtitle_in_a_good_story.mov | 09_get_lost/green/02_line_and_subtitle_in_a_good_story_green.mp4,alpha
+21.00,23.40,2.40,09_get_lost,09_get_lost/03_dark_shade.png,shade
+23.40,25.80,2.40,10_uncover,10_uncover/01_word_UNCOVER.mov | 10_uncover/green/01_word_UNCOVER_green.mp4,alpha
+23.40,25.80,2.40,10_uncover,10_uncover/02_line_and_subtitle_centuries_of_history.mov | 10_uncover/green/02_line_and_subtitle_centuries_of_history_green.mp4,alpha
+23.40,25.80,2.40,10_uncover,10_uncover/03_dark_shade.png,shade
+25.80,30.60,4.80,11_where_when,11_where_when/04_left_side_shade.png,shade
+26.00,30.60,4.60,11_where_when,11_where_when/01_title_WHERE_AND_WHEN.mov | 11_where_when/green/01_title_WHERE_AND_WHEN_green.mp4,alpha
+26.20,30.60,4.40,11_where_when,11_where_when/02_location_card.mov | 11_where_when/green/02_location_card_green.mp4,alpha
+26.70,30.60,3.90,11_where_when,11_where_when/03_time_card.mov | 11_where_when/green/03_time_card_green.mp4,alpha
+30.60,35.40,4.80,12_end_card,12_end_card/01_background_navy.mp4,opaque
+30.60,35.40,4.80,12_end_card,12_end_card/02_border_frame.mov | 12_end_card/green/02_border_frame_green.mp4,alpha
+30.60,35.40,4.80,12_end_card,12_end_card/03_tagline_turn_the_page_with_us.mov | 12_end_card/green/03_tagline_turn_the_page_with_us_green.mp4,alpha
+30.60,35.40,4.80,12_end_card,12_end_card/04_logo_beyond_the_pages.mov | 12_end_card/green/04_logo_beyond_the_pages_green.mp4,alpha
+30.60,35.40,4.80,12_end_card,12_end_card/05_library_week_label.mov | 12_end_card/green/05_library_week_label_green.mp4,alpha
+30.60,35.40,4.80,12_end_card,12_end_card/06_button_SEE_YOU_THERE.mov | 12_end_card/green/06_button_SEE_YOU_THERE_green.mp4,alpha
+30.60,35.40,4.80,12_end_card,12_end_card/07_venue_and_time_line.mov | 12_end_card/green/07_venue_and_time_line_green.mp4,alpha
+30.60,35.40,4.80,12_end_card,12_end_card/08_sparkles.mov | 12_end_card/green/08_sparkles_green.mp4,alpha
