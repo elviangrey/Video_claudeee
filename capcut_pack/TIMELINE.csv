@@ -1,0 +1,65 @@
+start_s,end_s,duration_s,track,file,notes
+0.00,35.40,35.40,Audio 1 (music),04_AUDIO/A1_music_bed.wav,volume 0.85
+0.00,2.50,2.50,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_deep_boom.wav,volume 0.9
+0.00,3.00,3.00,Video 1 (main),01_FOOTAGE_CLIPS/01_hook_manuscript.mp4,source manuscript.mp4 3.60-6.60s
+0.00,3.00,3.00,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/01_hook.mov,transparent graphics; mobile: 03b green + Chroma Key
+0.15,1.35,1.20,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_paper_rustle.wav,volume 0.35
+0.30,2.70,2.40,Text (optional),05_CAPTIONS/captions.srt,Every page hides a story…
+2.65,3.35,0.70,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_whoosh.wav,volume 0.55
+3.00,5.40,2.40,Video 1 (main),01_FOOTAGE_CLIPS/02_peek_bookshelf.mp4,source book_transition_2.mp4 5.60-8.00s
+3.00,5.40,2.40,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/02_peek.mov,transparent graphics; mobile: 03b green + Chroma Key
+3.30,3.48,0.18,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_pop.wav,volume 0.7
+3.30,5.15,1.85,Text (optional),05_CAPTIONS/captions.srt,Psst…
+3.55,5.10,1.55,Text (optional),05_CAPTIONS/captions.srt,The library has a secret.
+5.20,5.60,0.40,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_whoosh_short.wav,volume 0.45
+5.40,7.80,2.40,Video 1 (main),01_FOOTAGE_CLIPS/03_notice_poster.mp4,source opening_1.mp4 1.40-3.80s
+5.40,7.80,2.40,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/03_notice.mov,transparent graphics; mobile: 03b green + Chroma Key
+5.55,7.50,1.95,Text (optional),05_CAPTIONS/captions.srt,Have you seen it yet?
+7.80,10.20,2.40,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_riser.wav,volume 0.75
+7.80,10.20,2.40,Video 1 (main),01_FOOTAGE_CLIPS/04_poster_zoom.mp4,source opening3.mp4 3.80-6.20s
+7.80,10.20,2.40,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/04_poster_flash.mov,transparent graphics; mobile: 03b green + Chroma Key
+10.20,12.40,2.20,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_impact.wav,volume 1.0
+10.20,13.80,3.60,Video 1 (main),01_FOOTAGE_CLIPS/05_title_card_background.mp4,title card background (text is on overlay 05)
+10.20,13.80,3.60,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/05_title_card.mov,transparent graphics; mobile: 03b green + Chroma Key
+10.40,13.60,3.20,Text (optional),05_CAPTIONS/captions.srt,LIBRARY WEEK — Beyond the Pages:
+10.50,12.30,1.80,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_shimmer.wav,volume 0.45
+13.45,14.00,0.55,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_page_flip.wav,volume 0.9
+13.80,16.20,2.40,Video 1 (main),01_FOOTAGE_CLIPS/06_stairs.mp4,source opening_2.mp4 1.20-3.60s
+13.80,16.20,2.40,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/06_page_wipe_stairs.mov,transparent graphics; mobile: 03b green + Chroma Key
+14.15,15.90,1.75,Text (optional),05_CAPTIONS/captions.srt,Step inside the story.
+16.00,16.40,0.40,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_whoosh_short.wav,volume 0.5
+16.20,18.60,2.40,Video 1 (main),01_FOOTAGE_CLIPS/07_explore_aisle.mp4,source library_ambience.mp4 0.00-2.40s
+16.20,18.60,2.40,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/07_explore.mov,transparent graphics; mobile: 03b green + Chroma Key
+16.25,16.37,0.12,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_tick.wav,volume 0.5
+16.25,18.35,2.10,Text (optional),05_CAPTIONS/captions.srt,EXPLORE — every shelf
+18.40,18.80,0.40,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_whoosh_short.wav,volume 0.5
+18.60,21.00,2.40,Video 1 (main),01_FOOTAGE_CLIPS/08_discover_pick_book.mp4,source book_transition.mp4 1.20-3.60s
+18.60,21.00,2.40,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/08_discover.mov,transparent graphics; mobile: 03b green + Chroma Key
+18.65,18.77,0.12,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_tick.wav,volume 0.5
+18.65,20.75,2.10,Text (optional),05_CAPTIONS/captions.srt,DISCOVER — your next favourite read
+20.80,21.20,0.40,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_whoosh_short.wav,volume 0.5
+21.00,23.40,2.40,Video 1 (main),01_FOOTAGE_CLIPS/09_getlost_page_flip.mp4,source book_transition.mp4 9.40-11.80s
+21.00,23.40,2.40,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/09_get_lost.mov,transparent graphics; mobile: 03b green + Chroma Key
+21.05,23.15,2.10,Text (optional),05_CAPTIONS/captions.srt,GET LOST — in a good story
+21.20,21.75,0.55,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_page_flip.wav,volume 0.75
+22.00,22.55,0.55,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_page_flip.wav,volume 0.6
+23.20,23.60,0.40,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_whoosh_short.wav,volume 0.5
+23.40,25.80,2.40,Video 1 (main),01_FOOTAGE_CLIPS/10_uncover_manuscript.mp4,source manuscript.mp4 0.00-2.40s
+23.40,25.80,2.40,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/10_uncover.mov,transparent graphics; mobile: 03b green + Chroma Key
+23.45,23.57,0.12,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_tick.wav,volume 0.5
+23.45,25.55,2.10,Text (optional),05_CAPTIONS/captions.srt,UNCOVER — centuries of history
+25.45,26.15,0.70,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_whoosh.wav,volume 0.5
+25.80,30.60,4.80,Video 1 (main),01_FOOTAGE_CLIPS/11_where_when_walk.mp4,source ending.mp4 3.70-8.50s
+25.80,30.60,4.80,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/11_where_when.mov,transparent graphics; mobile: 03b green + Chroma Key
+26.00,30.15,4.15,Text (optional),05_CAPTIONS/captions.srt,WHERE & WHEN
+26.20,30.15,3.95,Text (optional),05_CAPTIONS/captions.srt,"Perpustakaan Tun Abdul Razak, Kampus Samarahan 2"
+26.25,26.43,0.18,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_pop.wav,volume 0.6
+26.70,30.15,3.45,Text (optional),05_CAPTIONS/captions.srt,2 – 5 PM · Library Week
+26.75,26.93,0.18,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_pop.wav,volume 0.6
+30.60,32.80,2.20,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_impact.wav,volume 0.75
+30.60,35.40,4.80,Video 1 (main),01_FOOTAGE_CLIPS/12_end_card_background.mp4,end card background (text is on overlay 12)
+30.60,35.40,4.80,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/12_end_card.mov,transparent graphics; mobile: 03b green + Chroma Key
+30.70,34.60,3.90,Text (optional),05_CAPTIONS/captions.srt,Turn the page with us.
+31.00,32.80,1.80,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_shimmer.wav,volume 0.4
+31.00,34.60,3.60,Text (optional),05_CAPTIONS/captions.srt,Beyond the Pages · LIBRARY WEEK
+31.90,34.60,2.70,Text (optional),05_CAPTIONS/captions.srt,SEE YOU THERE

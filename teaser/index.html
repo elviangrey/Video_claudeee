@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-composition-variables='[{"id":"layer","type":"string","label":"Layer (all | base | graphics)","default":"all"}]'>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1920, height=1080" />
@@ -159,6 +159,15 @@
       /* floating dust motes (deterministic positions) */
       .mote { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: rgba(255,240,210,0.8); filter: blur(1px); }
       .motes { z-index: 7; pointer-events: none; }
+
+      /* ---------- layer split for CapCut export (render with --variables '{"layer":"..."}') ---------- */
+      html.layer-graphics, html.layer-graphics body { background: transparent !important; }
+      html.layer-graphics video.shot, html.layer-graphics .grade-vignette, html.layer-graphics .shade-bottom,
+      html.layer-graphics .shade-full, html.layer-graphics .title-bg { visibility: hidden !important; }
+      html.layer-base .cap, html.layer-base .kinetic, html.layer-base .psst, html.layer-base .flash,
+      html.layer-base .title-frame, html.layer-base .wave, html.layer-base .title-stack, html.layer-base .sparkle,
+      html.layer-base .page-wipe, html.layer-base .info-head, html.layer-base .info-card, html.layer-base .end-stack,
+      html.layer-base .motes { visibility: hidden !important; }
     </style>
   </head>
   <body>
@@ -327,6 +336,13 @@
     </div>
 
     <script>
+      // ---------- layer split (all | base | graphics) ----------
+      (function () {
+        const vars = (window.__hyperframes && window.__hyperframes.getVariables) ? window.__hyperframes.getVariables() : {};
+        const layer = vars.layer || "all";
+        if (layer !== "all") document.documentElement.classList.add("layer-" + layer);
+      })();
+
       // ---------- deterministic helpers ----------
       function splitChars(el, text) {
         el.innerHTML = "";
