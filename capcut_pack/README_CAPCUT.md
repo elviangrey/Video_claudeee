@@ -20,10 +20,29 @@ are identical.
 | `02_BASE_FOOTAGE_WITH_MOTION/` | `base_footage_full.mp4`: all footage joined, with zoom/push-in, vignette, shading and the title/end card backgrounds already in, but **no text** | **Route A**: fastest |
 | `03_GRAPHICS_OVERLAY_ALPHA/` | 10 **transparent** `.mov` files plus 2 full-screen `.mp4` cards (05, 12) (ProRes 4444 + alpha): all text, animation, title, sparkles, page-turn wipe, flash, info cards, end card | Overlay track (CapCut **desktop / PC / Mac**) |
 | `03b_GRAPHICS_GREENSCREEN/` | The same 12 overlays on a green background | Overlay track in CapCut **mobile** (use Chroma Key) |
+| `06_ELEMENTS_WHERE_WHEN/` | The three *Where & When* elements (heading, location card, time card), one transparent video each | Edit or move each element separately |
 | `04_AUDIO/` | `A1_music_bed.wav` (music), `A2_sfx_all_placed.wav` (**all SFX already at the right times**, 35.4 s), `sfx_individual/` (single SFX files) | Audio tracks |
 | `05_CAPTIONS/` | `captions.srt`, every on-screen line | If you want to retype the text in CapCut's own fonts |
 
 ---
+
+## 06_ELEMENTS_WHERE_WHEN: info elements as separate videos
+
+The three graphics from the *Where & When* scene are also exported **one per file**, so you can
+move, resize, retime or reuse each one on its own in CapCut.
+
+| File | Element | Length | Original start |
+|---|---|---|---|
+| `A_where_when_title.mov` | "WHERE & WHEN" heading (gold) | 4.6 s | 00:26.0 |
+| `B_location_card.mov` | Pin card: Perpustakaan Tun Abdul Razak, Kampus Samarahan 2 | 4.4 s | 00:26.2 |
+| `C_time_card.mov` | Clock card: 2 – 5 PM, Library Week | 3.9 s | 00:26.7 |
+
+- `.mov` = transparent (CapCut PC/Mac). `_green.mp4` = green background, for Chroma Key on CapCut mobile.
+- Each file is 1920×1080 and the element sits **in its original position**, so placing them on
+  three overlay tracks at the starts above gives exactly the original scene. Drag the element in
+  the preview to move it wherever you like.
+- Each one already has its slide-in animation and fade-out built in.
+- If you use these three, **don't** also use `03_…/11_where_when.mov`, or the elements will show twice.
 
 ## Route A: fastest, matches the preview exactly (about 5 minutes)
 
