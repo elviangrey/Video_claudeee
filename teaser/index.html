@@ -164,17 +164,23 @@
       .end-stack .meta { margin-top: 14px; font-family: var(--sans); font-weight: 600; font-size: 36px; letter-spacing: 0.08em; }
 
 
+      .music-credit {
+        z-index: 12; position: absolute; inset: auto; left: 0; right: 0; bottom: 78px; width: 100%; height: auto;
+        text-align: center; font-family: var(--sans); font-weight: 500; font-size: 20px; letter-spacing: 0.04em;
+        color: rgba(244,236,220,0.75);
+      }
+
       /* ---------- layer split for CapCut export (render with --variables '{"layer":"..."}') ---------- */
       html.layer-graphics, html.layer-graphics body { background: transparent !important; }
       html.layer-graphics video.shot, html.layer-graphics .grade-vignette, html.layer-graphics .shade-bottom,
       html.layer-graphics .shade-full, html.layer-graphics .title-bg { visibility: hidden !important; }
       html.layer-base .cap, html.layer-base .kinetic, html.layer-base .psst, html.layer-base .flash,
       html.layer-base .title-frame, html.layer-base .wave, html.layer-base .title-stack, html.layer-base .sparkle,
-      html.layer-base .page-wipe, html.layer-base .info-head, html.layer-base .info-title, html.layer-base .info-card, html.layer-base .end-stack { visibility: hidden !important; }
+      html.layer-base .page-wipe, html.layer-base .info-head, html.layer-base .info-title, html.layer-base .info-card, html.layer-base .end-stack, html.layer-base .music-credit { visibility: hidden !important; }
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="35.4" data-width="1920" data-height="1080" data-fps="30">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="35.64" data-width="1920" data-height="1080" data-fps="30">
 
       <!-- =========================================================
            SCENE 1 · HOOK (0.0 – 3.0) — ancient manuscript push-in
@@ -210,14 +216,14 @@
       <div id="flash" class="clip flash" data-start="9.9" data-duration="0.7" data-track-index="20"></div>
 
       <!-- =========================================================
-           SCENE 5 · TITLE REVEAL (10.2 – 13.8) — the drop
+           SCENE 5 · TITLE REVEAL (10.2 – 14.04) — the drop
            ========================================================= -->
-      <div class="clip title-bg" data-start="10.2" data-duration="3.6" data-track-index="2"></div>
-      <div id="wave1" class="clip wave" data-start="10.2" data-duration="3.6" data-track-index="3" style="left:-500px; top:420px"></div>
-      <div id="wave2" class="clip wave" data-start="10.2" data-duration="3.6" data-track-index="3" style="left:1100px; top:-700px"></div>
-      <div id="frame1" class="clip title-frame" data-start="10.2" data-duration="3.6" data-track-index="3"></div>
-      <div id="frame2" class="clip title-frame inner" data-start="10.2" data-duration="3.6" data-track-index="3"></div>
-      <div id="title" class="clip title-stack" data-start="10.2" data-duration="3.6" data-track-index="10">
+      <div class="clip title-bg" data-start="10.2" data-duration="3.84" data-track-index="2"></div>
+      <div id="wave1" class="clip wave" data-start="10.2" data-duration="3.84" data-track-index="3" style="left:-500px; top:420px"></div>
+      <div id="wave2" class="clip wave" data-start="10.2" data-duration="3.84" data-track-index="3" style="left:1100px; top:-700px"></div>
+      <div id="frame1" class="clip title-frame" data-start="10.2" data-duration="3.84" data-track-index="3"></div>
+      <div id="frame2" class="clip title-frame inner" data-start="10.2" data-duration="3.84" data-track-index="3"></div>
+      <div id="title" class="clip title-stack" data-start="10.2" data-duration="3.84" data-track-index="10">
         <svg class="book-icon" viewBox="0 0 200 120">
           <path id="book-l" d="M100 30 C 75 12, 40 10, 12 18 L 12 100 C 40 92, 75 94, 100 112 Z" />
           <path id="book-r" d="M100 30 C 125 12, 160 10, 188 18 L 188 100 C 160 92, 125 94, 100 112 Z" />
@@ -230,72 +236,72 @@
       </div>
 
       <!-- page-turn wipe from title into the montage -->
-      <div id="wipe" class="clip page-wipe" data-layout-allow-occlusion data-start="13.4" data-duration="0.85" data-track-index="21"></div>
+      <div id="wipe" class="clip page-wipe" data-layout-allow-occlusion data-start="13.64" data-duration="0.85" data-track-index="21"></div>
 
       <!-- =========================================================
-           SCENES 6–10 · MONTAGE (13.8 – 25.8)
+           SCENES 6–10 · MONTAGE (14.04 – 26.04)
            ========================================================= -->
       <video id="v-stairs" class="clip shot" src="assets/footage/opening_2.mp4" muted playsinline
-             data-start="13.8" data-duration="2.4" data-media-start="1.2" data-track-index="1"></video>
-      <div class="clip shade-bottom" data-start="13.8" data-duration="2.4" data-track-index="5"></div>
-      <div id="cap-stairs" class="clip cap" data-start="13.8" data-duration="2.4" data-track-index="10">
+             data-start="14.04" data-duration="2.4" data-media-start="1.2" data-track-index="1"></video>
+      <div class="clip shade-bottom" data-start="14.04" data-duration="2.4" data-track-index="5"></div>
+      <div id="cap-stairs" class="clip cap" data-start="14.04" data-duration="2.4" data-track-index="10">
         <div class="line"><span class="w">Step </span><span class="w">inside </span><span class="w">the </span><span class="w"><em>story.</em></span></div>
       </div>
 
       <video id="v-aisle" class="clip shot" src="assets/footage/library_ambience.mp4" muted playsinline
-             data-start="16.2" data-duration="2.4" data-media-start="0" data-track-index="1"></video>
-      <div class="clip shade-full" data-start="16.2" data-duration="2.4" data-track-index="5"></div>
-      <div id="k-explore" class="clip kinetic" data-start="16.2" data-duration="2.4" data-track-index="10">
+             data-start="16.44" data-duration="2.4" data-media-start="0" data-track-index="1"></video>
+      <div class="clip shade-full" data-start="16.44" data-duration="2.4" data-track-index="5"></div>
+      <div id="k-explore" class="clip kinetic" data-start="16.44" data-duration="2.4" data-track-index="10">
         <div class="big">EXPLORE</div><div class="rule"></div><div class="sub">every shelf</div>
       </div>
 
       <video id="v-pick" class="clip shot" src="assets/footage/book_transition.mp4" muted playsinline
-             data-start="18.6" data-duration="2.4" data-media-start="1.2" data-track-index="1"></video>
-      <div class="clip shade-full" data-start="18.6" data-duration="2.4" data-track-index="5"></div>
-      <div id="k-discover" class="clip kinetic" data-start="18.6" data-duration="2.4" data-track-index="10">
+             data-start="18.84" data-duration="2.4" data-media-start="1.2" data-track-index="1"></video>
+      <div class="clip shade-full" data-start="18.84" data-duration="2.4" data-track-index="5"></div>
+      <div id="k-discover" class="clip kinetic" data-start="18.84" data-duration="2.4" data-track-index="10">
         <div class="big">DISCOVER</div><div class="rule"></div><div class="sub">your next favourite read</div>
       </div>
 
       <video id="v-flip" class="clip shot" src="assets/footage/book_transition.mp4" muted playsinline
-             data-start="21.0" data-duration="2.4" data-media-start="9.4" data-track-index="1"></video>
-      <div class="clip shade-full" data-start="21.0" data-duration="2.4" data-track-index="5"></div>
-      <div id="k-lost" class="clip kinetic" data-start="21.0" data-duration="2.4" data-track-index="10">
+             data-start="21.24" data-duration="2.4" data-media-start="9.4" data-track-index="1"></video>
+      <div class="clip shade-full" data-start="21.24" data-duration="2.4" data-track-index="5"></div>
+      <div id="k-lost" class="clip kinetic" data-start="21.24" data-duration="2.4" data-track-index="10">
         <div class="big">GET LOST</div><div class="rule"></div><div class="sub">in a good story</div>
       </div>
 
       <video id="v-history" class="clip shot" src="assets/footage/manuscript.mp4" muted playsinline
-             data-start="23.4" data-duration="2.4" data-media-start="0" data-track-index="1"></video>
-      <div class="clip shade-full" data-start="23.4" data-duration="2.4" data-track-index="5"></div>
-      <div id="k-uncover" class="clip kinetic" data-start="23.4" data-duration="2.4" data-track-index="10">
+             data-start="23.64" data-duration="2.4" data-media-start="0" data-track-index="1"></video>
+      <div class="clip shade-full" data-start="23.64" data-duration="2.4" data-track-index="5"></div>
+      <div id="k-uncover" class="clip kinetic" data-start="23.64" data-duration="2.4" data-track-index="10">
         <div class="big">UNCOVER</div><div class="rule"></div><div class="sub">centuries of history</div>
       </div>
 
       <!-- =========================================================
-           SCENE 11 · WHERE & WHEN (25.8 – 30.6)
+           SCENE 11 · WHERE & WHEN (26.04 – 30.84)
            ========================================================= -->
       <video id="v-walk" class="clip shot" src="assets/footage/ending.mp4" muted playsinline
-             data-start="25.8" data-duration="4.8" data-media-start="3.7" data-track-index="1"></video>
-      <div class="clip shade-bottom" data-start="25.8" data-duration="4.8" data-track-index="5"
+             data-start="26.04" data-duration="4.8" data-media-start="3.7" data-track-index="1"></video>
+      <div class="clip shade-bottom" data-start="26.04" data-duration="4.8" data-track-index="5"
            style="background: linear-gradient(90deg, rgba(8,18,40,0.94) 0%, rgba(8,18,40,0.8) 45%, rgba(8,18,40,0.15) 78%, rgba(8,18,40,0) 90%);"></div>
-      <div id="info-head" class="clip info-head" data-start="26.0" data-duration="4.6" data-track-index="10">WHERE &amp; WHEN</div>
-      <div id="info-title" class="clip info-title" data-start="26.0" data-duration="4.6" data-track-index="10">Beyond the Pages: Library Week</div>
-      <div id="info-loc" class="clip info-card" data-start="26.2" data-duration="4.4" data-track-index="11" style="top:470px">
+      <div id="info-head" class="clip info-head" data-start="26.24" data-duration="4.6" data-track-index="10">WHERE &amp; WHEN</div>
+      <div id="info-title" class="clip info-title" data-start="26.24" data-duration="4.6" data-track-index="10">Beyond the Pages: Library Week</div>
+      <div id="info-loc" class="clip info-card" data-start="26.44" data-duration="4.4" data-track-index="11" style="top:470px">
         <svg viewBox="0 0 64 64"><path d="M32 58 C 32 58 12 36 12 24 A 20 20 0 0 1 52 24 C 52 36 32 58 32 58 Z"/><circle cx="32" cy="24" r="7"/></svg>
         <div class="div"></div>
         <div><div class="t1">Perpustakaan Tun Abdul Razak</div><div class="t2">KAMPUS SAMARAHAN 2</div></div>
       </div>
-      <div id="info-time" class="clip info-card" data-start="26.7" data-duration="3.9" data-track-index="11" style="top:660px; width:880px">
+      <div id="info-time" class="clip info-card" data-start="26.94" data-duration="3.9" data-track-index="11" style="top:660px; width:880px">
         <svg viewBox="0 0 64 64"><rect x="10" y="14" width="44" height="40" rx="5"/><path d="M10 26 H54 M22 8 V18 M42 8 V18"/></svg>
         <div class="div"></div>
         <div><div class="t1">Wednesday · 2 – 5 PM</div></div>
       </div>
 
       <!-- =========================================================
-           SCENE 12 · END CARD / CTA (30.6 – 35.4)
+           SCENE 12 · END CARD / CTA (30.84 – 35.64)
            ========================================================= -->
-      <div class="clip title-bg" data-start="30.6" data-duration="4.8" data-track-index="2"></div>
-      <div id="frame3" class="clip title-frame" data-start="30.6" data-duration="4.8" data-track-index="3"></div>
-      <div id="end" class="clip end-stack" data-start="30.6" data-duration="4.8" data-track-index="10">
+      <div class="clip title-bg" data-start="30.84" data-duration="4.8" data-track-index="2"></div>
+      <div id="frame3" class="clip title-frame" data-start="30.84" data-duration="4.8" data-track-index="3"></div>
+      <div id="end" class="clip end-stack" data-start="30.84" data-duration="4.8" data-track-index="10">
         <div class="pre" id="end-pre">Turn the page with us.</div>
         <div class="logo" id="end-logo">Beyond the Pages</div>
         <div class="lw" id="end-lw">LIBRARY WEEK</div>
@@ -304,17 +310,20 @@
         <div class="cta" id="end-cta">SEE YOU THERE</div>
       </div>
 
+      <div id="music-credit" class="clip music-credit" data-start="31.24" data-duration="4.4" data-track-index="12">Music: “Comfortable Mystery” &amp; “Inspired” by Kevin MacLeod (incompetech.com) · Licensed under CC BY 4.0</div>
+
       <!-- =========================================================
            AUDIO · music bed + sound design
            ========================================================= -->
-      <audio id="a-music" src="assets/audio/music_bed.wav" data-start="0" data-duration="35.4" data-volume="0.85" data-track-index="30"></audio>
+      <audio id="a-music-intro" src="assets/audio/music_intro_mystery.wav" data-start="0" data-duration="10.6" data-volume="1" data-track-index="30"></audio>
+      <audio id="a-music-main" src="assets/audio/music_main_inspired.wav" data-start="10.151" data-duration="25.4" data-volume="1" data-track-index="30"></audio>
       <audio id="a-sfx-01" src="assets/audio/sfx_deep_boom.wav"   data-start="0.0"  data-duration="2.5" data-volume="0.6" data-track-index="31"></audio>
       <audio id="a-sfx-03" src="assets/audio/sfx_whoosh.wav"      data-start="2.65" data-duration="0.7" data-volume="0.35" data-track-index="31"></audio>
       <audio id="a-sfx-06" src="assets/audio/sfx_riser.wav"       data-start="7.8"  data-duration="2.4" data-volume="0.5" data-track-index="32"></audio>
       <audio id="a-sfx-07" src="assets/audio/sfx_impact.wav"      data-start="10.2" data-duration="2.2" data-volume="0.7" data-track-index="31"></audio>
-      <audio id="a-sfx-09" src="assets/audio/sfx_page_flip.wav"   data-start="13.45" data-duration="0.55" data-volume="0.9" data-track-index="32"></audio>
-      <audio id="a-sfx-15" src="assets/audio/sfx_page_flip.wav"   data-start="21.2" data-duration="0.55" data-volume="0.75" data-track-index="32"></audio>
-      <audio id="a-sfx-19" src="assets/audio/sfx_whoosh.wav"      data-start="25.45" data-duration="0.7" data-volume="0.3" data-track-index="31"></audio>
+      <audio id="a-sfx-09" src="assets/audio/sfx_page_flip.wav"   data-start="13.69" data-duration="0.55" data-volume="0.9" data-track-index="32"></audio>
+      <audio id="a-sfx-15" src="assets/audio/sfx_page_flip.wav"   data-start="21.44" data-duration="0.55" data-volume="0.75" data-track-index="32"></audio>
+      <audio id="a-sfx-19" src="assets/audio/sfx_whoosh.wav"      data-start="25.69" data-duration="0.7" data-volume="0.3" data-track-index="31"></audio>
     </div>
 
     <script>
@@ -394,12 +403,12 @@
       })();
       tl.to("#title", { scale: 1.04, duration: 3.0, ease: "none" }, 10.6);
 
-      // page-turn wipe: a sheet sweeps right-to-left over the cut at 13.8
-      tl.fromTo("#wipe", { x: 2400, skewX: -12 }, { x: -2600, skewX: 8, duration: 0.85, ease: "power2.inOut" }, 13.4);
+      // page-turn wipe: a sheet sweeps right-to-left over the cut at 14.04
+      tl.fromTo("#wipe", { x: 2400, skewX: -12 }, { x: -2600, skewX: 8, duration: 0.85, ease: "power2.inOut" }, 13.64);
 
       // S6 stairs
-      tl.fromTo("#v-stairs", { scale: 1.12 }, { scale: 1.02, duration: 2.4, ease: "power1.out" }, 13.8);
-      caption("#cap-stairs", 14.15, 2.05, 0.12);
+      tl.fromTo("#v-stairs", { scale: 1.12 }, { scale: 1.02, duration: 2.4, ease: "power1.out" }, 14.04);
+      caption("#cap-stairs", 14.39, 2.05, 0.12);
 
       // S7–S10 kinetic words: letters slam in, gold rule draws, subline slides up
       function kinetic(sel, vid, t, push) {
@@ -410,30 +419,31 @@
         tl.fromTo(sel + " .sub", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, t + 0.5);
         tl.to(sel, { opacity: 0, scale: 0.92, duration: 0.22, ease: "power2.in" }, t + 2.15);
       }
-      kinetic("#k-explore", "#v-aisle", 16.2, true);
-      kinetic("#k-discover", "#v-pick", 18.6, false);
-      kinetic("#k-lost", "#v-flip", 21.0, true);
-      kinetic("#k-uncover", "#v-history", 23.4, true);
+      kinetic("#k-explore", "#v-aisle", 16.44, true);
+      kinetic("#k-discover", "#v-pick", 18.84, false);
+      kinetic("#k-lost", "#v-flip", 21.24, true);
+      kinetic("#k-uncover", "#v-history", 23.64, true);
 
       // S11 where & when
-      tl.fromTo("#v-walk", { scale: 1.06 }, { scale: 1.0, duration: 4.8, ease: "none" }, 25.8);
-      tl.fromTo("#info-head", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 26.0);
-      tl.fromTo("#info-title", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 26.1);
-      tl.fromTo("#info-loc", { x: -1300 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.3);
-      tl.fromTo("#info-time", { x: -1000 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.6);
-      tl.fromTo("#info-loc svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.4, ease: "power2.out" }, 26.5);
-      tl.fromTo("#info-time svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.4, ease: "power2.out" }, 26.9);
-      tl.to(["#info-head", "#info-title", "#info-loc", "#info-time"], { opacity: 0, x: -40, duration: 0.3, stagger: 0.05, ease: "power2.in" }, 30.15);
+      tl.fromTo("#v-walk", { scale: 1.06 }, { scale: 1.0, duration: 4.8, ease: "none" }, 26.04);
+      tl.fromTo("#info-head", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 26.24);
+      tl.fromTo("#info-title", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 26.34);
+      tl.fromTo("#info-loc", { x: -1300 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.54);
+      tl.fromTo("#info-time", { x: -1000 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.84);
+      tl.fromTo("#info-loc svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.4, ease: "power2.out" }, 26.74);
+      tl.fromTo("#info-time svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.4, ease: "power2.out" }, 27.14);
+      tl.to(["#info-head", "#info-title", "#info-loc", "#info-time"], { opacity: 0, x: -40, duration: 0.3, stagger: 0.05, ease: "power2.in" }, 30.39);
 
       // S12 end card
-      tl.fromTo("#frame3", { scale: 1.08, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 30.6);
-      tl.fromTo("#end-pre", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 30.7);
-      tl.fromTo("#end-logo", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 31.0);
-      tl.fromTo("#end-lw", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.8, ease: "power3.out" }, 31.3);
-      tl.fromTo("#end-when", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 31.6);
-      tl.fromTo("#end-cta", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }, 32.2);
-      tl.fromTo("#end-meta", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 31.85);
-      tl.to("#end", { opacity: 0, duration: 0.5, ease: "power1.in" }, 34.9);
+      tl.fromTo("#frame3", { scale: 1.08, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 30.84);
+      tl.fromTo("#end-pre", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 30.94);
+      tl.fromTo("#end-logo", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 31.24);
+      tl.fromTo("#end-lw", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.8, ease: "power3.out" }, 31.54);
+      tl.fromTo("#end-when", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 31.84);
+      tl.fromTo("#end-cta", { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }, 32.44);
+      tl.fromTo("#end-meta", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 32.09);
+      tl.fromTo("#music-credit", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power1.out" }, 31.24);
+      tl.to("#end", { opacity: 0, duration: 0.5, ease: "power1.in" }, 35.14);
 
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
