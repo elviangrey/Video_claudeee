@@ -20,7 +20,7 @@ start_s,end_s,duration_s,track,file,notes
 7.80,10.20,2.40,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/04_poster_flash.mov,transparent graphics; mobile: 03b green + Chroma Key
 10.20,12.40,2.20,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_impact.wav,volume 1.0
 10.20,13.80,3.60,Video 1 (main),01_FOOTAGE_CLIPS/05_title_card_background.mp4,title card background (text is on overlay 05)
-10.20,13.80,3.60,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/05_title_card.mov,transparent graphics; mobile: 03b green + Chroma Key
+10.20,13.80,3.60,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/05_title_card_FULLSCREEN.mp4,"full-screen card, opaque, no Chroma Key needed"
 10.40,13.60,3.20,Text (optional),05_CAPTIONS/captions.srt,LIBRARY WEEK — Beyond the Pages:
 10.50,12.30,1.80,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_shimmer.wav,volume 0.45
 13.45,14.00,0.55,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_page_flip.wav,volume 0.9
@@ -58,7 +58,7 @@ start_s,end_s,duration_s,track,file,notes
 26.75,26.93,0.18,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_pop.wav,volume 0.6
 30.60,32.80,2.20,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_impact.wav,volume 0.75
 30.60,35.40,4.80,Video 1 (main),01_FOOTAGE_CLIPS/12_end_card_background.mp4,end card background (text is on overlay 12)
-30.60,35.40,4.80,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/12_end_card.mov,transparent graphics; mobile: 03b green + Chroma Key
+30.60,35.40,4.80,Video 2 (overlay),03_GRAPHICS_OVERLAY_ALPHA/12_end_card_FULLSCREEN.mp4,"full-screen card, opaque, no Chroma Key needed"
 30.70,34.60,3.90,Text (optional),05_CAPTIONS/captions.srt,Turn the page with us.
 31.00,32.80,1.80,Audio 2 (sfx),04_AUDIO/sfx_individual/sfx_shimmer.wav,volume 0.4
 31.00,34.60,3.60,Text (optional),05_CAPTIONS/captions.srt,Beyond the Pages · LIBRARY WEEK

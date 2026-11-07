@@ -3,6 +3,14 @@
 Every element of the teaser (35.4 s, 1920×1080, 30 fps) is split out so you can rebuild it or keep
 editing in CapCut. Timing for every element is in **`TIMELINE.csv`**.
 
+## Downloading the pack in parts
+
+The pack is split into several `partNN_of_NN.zip` files so the downloads don't get cut off.
+Download **every part**, then for each zip: right-click → **Extract All…** → pick the same
+folder (for example `Downloads`). They all extract into **one** folder, `capcut_pack`. If
+Windows asks to replace `README_CAPCUT.md` / `TIMELINE.csv`, click **Replace**, since the copies
+are identical.
+
 ## Folders
 
 | Folder | Contents | Use for |
@@ -10,7 +18,7 @@ editing in CapCut. Timing for every element is in **`TIMELINE.csv`**.
 | `00_REFERENCE/` | `reference_preview_720p.mp4`, the finished teaser | Check that your CapCut version matches |
 | `01_FOOTAGE_CLIPS/` | 12 clips, already trimmed, upright, numbered in order (01–12). No zoom, no text | **Route B**: main track you can edit yourself |
 | `02_BASE_FOOTAGE_WITH_MOTION/` | `base_footage_full.mp4`: all footage joined, with zoom/push-in, vignette, shading and the title/end card backgrounds already in, but **no text** | **Route A**: fastest |
-| `03_GRAPHICS_OVERLAY_ALPHA/` | 12 **transparent** `.mov` files (ProRes 4444 + alpha): all text, animation, title, sparkles, page-turn wipe, flash, info cards, end card | Overlay track (CapCut **desktop / PC / Mac**) |
+| `03_GRAPHICS_OVERLAY_ALPHA/` | 10 **transparent** `.mov` files plus 2 full-screen `.mp4` cards (05, 12) (ProRes 4444 + alpha): all text, animation, title, sparkles, page-turn wipe, flash, info cards, end card | Overlay track (CapCut **desktop / PC / Mac**) |
 | `03b_GRAPHICS_GREENSCREEN/` | The same 12 overlays on a green background | Overlay track in CapCut **mobile** (use Chroma Key) |
 | `04_AUDIO/` | `A1_music_bed.wav` (music), `A2_sfx_all_placed.wav` (**all SFX already at the right times**, 35.4 s), `sfx_individual/` (single SFX files) | Audio tracks |
 | `05_CAPTIONS/` | `captions.srt`, every on-screen line | If you want to retype the text in CapCut's own fonts |
@@ -31,14 +39,17 @@ editing in CapCut. Timing for every element is in **`TIMELINE.csv`**.
    | `02_peek` | 00:03.0 |
    | `03_notice` | 00:05.4 |
    | `04_poster_flash` | 00:07.8 |
-   | `05_title_card` | 00:10.2 |
+   | `05_title_card_FULLSCREEN.mp4` | 00:10.2 |
    | `06_page_wipe_stairs` | 00:13.8 |
    | `07_explore` | 00:16.2 |
    | `08_discover` | 00:18.6 |
    | `09_get_lost` | 00:21.0 |
    | `10_uncover` | 00:23.4 |
    | `11_where_when` | 00:25.8 |
-   | `12_end_card` | 00:30.6 |
+   | `12_end_card_FULLSCREEN.mp4` | 00:30.6 |
+
+   Overlays `05` and `12` are **ordinary MP4s that cover the whole screen** (title card and end
+   card). They have no transparency and need no Chroma Key.
 
    Tip: if you drop them in a row with no gaps starting at 0:00, they line up on their own
    because the lengths are already right.

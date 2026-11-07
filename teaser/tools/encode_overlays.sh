@@ -45,6 +45,14 @@ while read -r n label ss dur; do
   ffmpeg -nostdin -v error -y -f lavfi -i "color=c=0x00FF00:s=1920x1080:r=30" "${IN[@]}" -ss 0 -t "$dur" \
     -filter_complex "[1:v]trim=start=${ss}:duration=${dur},setpts=PTS-STARTPTS[g];[0:v][g]overlay=format=auto:shortest=1,format=yuv420p" \
     -c:v libx264 -crf 14 -preset medium -an -movflags +faststart "$PACK/03b_GRAPHICS_GREENSCREEN/${n}_${label}_green.mp4"
+  if [ "$label" = "title_card" ] || [ "$label" = "end_card" ]; then
+    # full-screen cards: bake graphics over the card background as a small opaque MP4 (no alpha needed)
+    rm -f "$PACK/03_GRAPHICS_OVERLAY_ALPHA/${n}_${label}.mov" "$PACK/03b_GRAPHICS_GREENSCREEN/${n}_${label}_green.mp4"
+    ffmpeg -nostdin -v error -y -ss "$ss" -t "$dur" -i renders/base_footage.mp4 "${IN[@]}" \
+      -filter_complex "[1:v]trim=start=${ss}:duration=${dur},setpts=PTS-STARTPTS[g];[0:v][g]overlay=format=auto:shortest=1,format=yuv420p" \
+      -c:v libx264 -crf 14 -preset medium -an -movflags +faststart "$PACK/03_GRAPHICS_OVERLAY_ALPHA/${n}_${label}_FULLSCREEN.mp4"
+    cp "$PACK/03_GRAPHICS_OVERLAY_ALPHA/${n}_${label}_FULLSCREEN.mp4" "$PACK/03b_GRAPHICS_GREENSCREEN/${n}_${label}_FULLSCREEN.mp4"
+  fi
   echo "segment $n $label"
 done <<< "$SEGS"
 

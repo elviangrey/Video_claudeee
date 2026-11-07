@@ -139,6 +139,10 @@ def main():
                             ("05","title_card",10.2,3.6),("06","page_wipe_stairs",13.8,2.4),("07","explore",16.2,2.4),
                             ("08","discover",18.6,2.4),("09","get_lost",21.0,2.4),("10","uncover",23.4,2.4),
                             ("11","where_when",25.8,4.8),("12","end_card",30.6,4.8)]:
+        if label in ("title_card", "end_card"):
+            rows.append([f"{s0:.2f}", f"{s0 + d:.2f}", f"{d:.2f}", "Video 2 (overlay)",
+                         f"03_GRAPHICS_OVERLAY_ALPHA/{n}_{label}_FULLSCREEN.mp4", "full-screen card, opaque, no Chroma Key needed"])
+            continue
         rows.append([f"{s0:.2f}", f"{s0 + d:.2f}", f"{d:.2f}", "Video 2 (overlay)",
                      f"03_GRAPHICS_OVERLAY_ALPHA/{n}_{label}.mov", "transparent graphics; mobile: 03b green + Chroma Key"])
     rows.sort(key=lambda r: (float(r[0]), r[3]))
