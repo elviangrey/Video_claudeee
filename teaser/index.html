@@ -156,9 +156,6 @@
       }
       .end-stack .meta { margin-top: 28px; font-family: var(--sans); font-weight: 500; font-size: 28px; letter-spacing: 0.12em; opacity: 0.85; }
 
-      /* floating dust motes (deterministic positions) */
-      .mote { position: absolute; width: 8px; height: 8px; border-radius: 50%; background: rgba(255,240,210,0.8); filter: blur(1px); }
-      .motes { z-index: 7; pointer-events: none; }
 
       /* ---------- layer split for CapCut export (render with --variables '{"layer":"..."}') ---------- */
       html.layer-graphics, html.layer-graphics body { background: transparent !important; }
@@ -166,8 +163,7 @@
       html.layer-graphics .shade-full, html.layer-graphics .title-bg { visibility: hidden !important; }
       html.layer-base .cap, html.layer-base .kinetic, html.layer-base .psst, html.layer-base .flash,
       html.layer-base .title-frame, html.layer-base .wave, html.layer-base .title-stack, html.layer-base .sparkle,
-      html.layer-base .page-wipe, html.layer-base .info-head, html.layer-base .info-card, html.layer-base .end-stack,
-      html.layer-base .motes { visibility: hidden !important; }
+      html.layer-base .page-wipe, html.layer-base .info-head, html.layer-base .info-card, html.layer-base .end-stack { visibility: hidden !important; }
     </style>
   </head>
   <body>
@@ -179,7 +175,6 @@
       <video id="v-hook" class="clip shot" src="assets/footage/manuscript.mp4" muted playsinline
              data-start="0" data-duration="3.0" data-media-start="3.6" data-track-index="1"></video>
       <div class="clip grade-vignette" data-start="0" data-duration="3.0" data-track-index="5"></div>
-      <div id="motes" class="clip motes" data-start="0" data-duration="3.0" data-track-index="6"></div>
       <div id="cap-hook" class="clip cap" data-start="0.2" data-duration="2.8" data-track-index="10">
         <div class="line"><span class="w">Every </span><span class="w">page </span><span class="w">hides </span><span class="w">a </span><span class="w"><em>story…</em></span></div>
       </div>
@@ -226,10 +221,6 @@
         <div class="headline" id="hl2"></div>
         <svg class="swoosh" viewBox="0 0 620 40"><path id="swoosh" d="M10 30 C 180 2, 440 2, 610 30" /></svg>
       </div>
-      <svg id="sp1" class="clip sparkle" data-start="10.2" data-duration="3.6" data-track-index="11" style="left:1450px; top:250px" viewBox="0 0 60 60"><path d="M30 0 C32 20 40 28 60 30 C40 32 32 40 30 60 C28 40 20 32 0 30 C20 28 28 20 30 0Z"/></svg>
-      <svg id="sp2" class="clip sparkle" data-start="10.2" data-duration="3.6" data-track-index="11" style="left:420px; top:330px; width:44px; height:44px" viewBox="0 0 60 60"><path d="M30 0 C32 20 40 28 60 30 C40 32 32 40 30 60 C28 40 20 32 0 30 C20 28 28 20 30 0Z"/></svg>
-      <svg id="sp3" class="clip sparkle" data-start="10.2" data-duration="3.6" data-track-index="11" style="left:1500px; top:820px; width:36px; height:36px" viewBox="0 0 60 60"><path d="M30 0 C32 20 40 28 60 30 C40 32 32 40 30 60 C28 40 20 32 0 30 C20 28 28 20 30 0Z"/></svg>
-      <svg id="sp4" class="clip sparkle" data-start="10.2" data-duration="3.6" data-track-index="11" style="left:360px; top:780px; width:30px; height:30px" viewBox="0 0 60 60"><path d="M30 0 C32 20 40 28 60 30 C40 32 32 40 30 60 C28 40 20 32 0 30 C20 28 28 20 30 0Z"/></svg>
 
       <!-- page-turn wipe from title into the montage -->
       <div id="wipe" class="clip page-wipe" data-layout-allow-occlusion data-start="13.4" data-duration="0.85" data-track-index="21"></div>
@@ -303,36 +294,18 @@
         <div class="cta" id="end-cta">SEE YOU THERE</div>
         <div class="meta" id="end-meta">PERPUSTAKAAN TUN ABDUL RAZAK · KAMPUS SAMARAHAN 2 · 2 – 5 PM</div>
       </div>
-      <svg id="sp5" class="clip sparkle" data-start="30.6" data-duration="4.8" data-track-index="11" style="left:1560px; top:200px" viewBox="0 0 60 60"><path d="M30 0 C32 20 40 28 60 30 C40 32 32 40 30 60 C28 40 20 32 0 30 C20 28 28 20 30 0Z"/></svg>
-      <svg id="sp6" class="clip sparkle" data-start="30.6" data-duration="4.8" data-track-index="11" style="left:300px; top:820px; width:40px; height:40px" viewBox="0 0 60 60"><path d="M30 0 C32 20 40 28 60 30 C40 32 32 40 30 60 C28 40 20 32 0 30 C20 28 28 20 30 0Z"/></svg>
 
       <!-- =========================================================
            AUDIO · music bed + sound design
            ========================================================= -->
       <audio id="a-music" src="assets/audio/music_bed.wav" data-start="0" data-duration="35.4" data-volume="0.85" data-track-index="30"></audio>
-      <audio id="a-sfx-01" src="assets/audio/sfx_deep_boom.wav"   data-start="0.0"  data-duration="2.5" data-volume="0.9" data-track-index="31"></audio>
-      <audio id="a-sfx-02" src="assets/audio/sfx_paper_rustle.wav" data-start="0.15" data-duration="1.2" data-volume="0.35" data-track-index="32"></audio>
-      <audio id="a-sfx-03" src="assets/audio/sfx_whoosh.wav"      data-start="2.65" data-duration="0.7" data-volume="0.55" data-track-index="31"></audio>
-      <audio id="a-sfx-04" src="assets/audio/sfx_pop.wav"         data-start="3.3"  data-duration="0.18" data-volume="0.7" data-track-index="32"></audio>
-      <audio id="a-sfx-05" src="assets/audio/sfx_whoosh_short.wav" data-start="5.2" data-duration="0.4" data-volume="0.45" data-track-index="31"></audio>
-      <audio id="a-sfx-06" src="assets/audio/sfx_riser.wav"       data-start="7.8"  data-duration="2.4" data-volume="0.75" data-track-index="32"></audio>
-      <audio id="a-sfx-07" src="assets/audio/sfx_impact.wav"      data-start="10.2" data-duration="2.2" data-volume="1.0" data-track-index="31"></audio>
-      <audio id="a-sfx-08" src="assets/audio/sfx_shimmer.wav"     data-start="10.5" data-duration="1.8" data-volume="0.45" data-track-index="33"></audio>
+      <audio id="a-sfx-01" src="assets/audio/sfx_deep_boom.wav"   data-start="0.0"  data-duration="2.5" data-volume="0.6" data-track-index="31"></audio>
+      <audio id="a-sfx-03" src="assets/audio/sfx_whoosh.wav"      data-start="2.65" data-duration="0.7" data-volume="0.35" data-track-index="31"></audio>
+      <audio id="a-sfx-06" src="assets/audio/sfx_riser.wav"       data-start="7.8"  data-duration="2.4" data-volume="0.5" data-track-index="32"></audio>
+      <audio id="a-sfx-07" src="assets/audio/sfx_impact.wav"      data-start="10.2" data-duration="2.2" data-volume="0.7" data-track-index="31"></audio>
       <audio id="a-sfx-09" src="assets/audio/sfx_page_flip.wav"   data-start="13.45" data-duration="0.55" data-volume="0.9" data-track-index="32"></audio>
-      <audio id="a-sfx-10" src="assets/audio/sfx_whoosh_short.wav" data-start="16.0" data-duration="0.4" data-volume="0.5" data-track-index="31"></audio>
-      <audio id="a-sfx-11" src="assets/audio/sfx_tick.wav"        data-start="16.25" data-duration="0.12" data-volume="0.5" data-track-index="33"></audio>
-      <audio id="a-sfx-12" src="assets/audio/sfx_whoosh_short.wav" data-start="18.4" data-duration="0.4" data-volume="0.5" data-track-index="31"></audio>
-      <audio id="a-sfx-13" src="assets/audio/sfx_tick.wav"        data-start="18.65" data-duration="0.12" data-volume="0.5" data-track-index="33"></audio>
-      <audio id="a-sfx-14" src="assets/audio/sfx_whoosh_short.wav" data-start="20.8" data-duration="0.4" data-volume="0.5" data-track-index="31"></audio>
       <audio id="a-sfx-15" src="assets/audio/sfx_page_flip.wav"   data-start="21.2" data-duration="0.55" data-volume="0.75" data-track-index="32"></audio>
-      <audio id="a-sfx-16" src="assets/audio/sfx_page_flip.wav"   data-start="22.0" data-duration="0.55" data-volume="0.6" data-track-index="33"></audio>
-      <audio id="a-sfx-17" src="assets/audio/sfx_whoosh_short.wav" data-start="23.2" data-duration="0.4" data-volume="0.5" data-track-index="31"></audio>
-      <audio id="a-sfx-18" src="assets/audio/sfx_tick.wav"        data-start="23.45" data-duration="0.12" data-volume="0.5" data-track-index="32"></audio>
-      <audio id="a-sfx-19" src="assets/audio/sfx_whoosh.wav"      data-start="25.45" data-duration="0.7" data-volume="0.5" data-track-index="31"></audio>
-      <audio id="a-sfx-20" src="assets/audio/sfx_pop.wav"         data-start="26.25" data-duration="0.18" data-volume="0.6" data-track-index="32"></audio>
-      <audio id="a-sfx-21" src="assets/audio/sfx_pop.wav"         data-start="26.75" data-duration="0.18" data-volume="0.6" data-track-index="33"></audio>
-      <audio id="a-sfx-22" src="assets/audio/sfx_impact.wav"      data-start="30.6" data-duration="2.2" data-volume="0.75" data-track-index="31"></audio>
-      <audio id="a-sfx-23" src="assets/audio/sfx_shimmer.wav"     data-start="31.0" data-duration="1.8" data-volume="0.4" data-track-index="32"></audio>
+      <audio id="a-sfx-19" src="assets/audio/sfx_whoosh.wav"      data-start="25.45" data-duration="0.7" data-volume="0.3" data-track-index="31"></audio>
     </div>
 
     <script>
@@ -358,22 +331,6 @@
       const hl1 = splitChars(document.getElementById("hl1"), "Beyond");
       const hl2 = splitChars(document.getElementById("hl2"), "the Pages:");
 
-      // dust motes for the hook (seeded LCG — no Math.random)
-      let seed = 12345;
-      const rnd = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648);
-      const motesEl = document.getElementById("motes");
-      const motes = [];
-      for (let i = 0; i < 26; i++) {
-        const m = document.createElement("div");
-        m.className = "mote";
-        const s = 3 + rnd() * 7;
-        m.style.width = m.style.height = s + "px";
-        m.style.left = rnd() * 1920 + "px";
-        m.style.top = rnd() * 1080 + "px";
-        m.style.opacity = 0.25 + rnd() * 0.6;
-        motesEl.appendChild(m);
-        motes.push({ el: m, dx: (rnd() - 0.5) * 120, dy: -40 - rnd() * 90 });
-      }
 
       // ---------- timeline ----------
       const tl = gsap.timeline({ paused: true });
@@ -381,23 +338,21 @@
 
       // caption helper: words rise + unblur, then whole caption fades before the cut
       function caption(sel, t, dur, stagger = 0.12) {
-        tl.fromTo(words(sel), { y: 40, opacity: 0, filter: "blur(10px)" },
-          { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.45, ease: "power3.out", stagger }, t);
+        tl.fromTo(sel + " .line", { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, t);
         tl.to(sel + " .line", { opacity: 0, y: -20, duration: 0.25, ease: "power2.in" }, t + dur - 0.3);
       }
 
       // S1 hook: slow push + drifting dust + caption
       tl.fromTo("#v-hook", { scale: 1.0 }, { scale: 1.14, duration: 3.0, ease: "none" }, 0);
-      motes.forEach((m, i) => tl.fromTo(m.el, { x: 0, y: 0 }, { x: m.dx, y: m.dy, duration: 3.0, ease: "none" }, 0));
-      tl.fromTo(words("#cap-hook"), { y: 40, opacity: 0, filter: "blur(12px)" },
-        { y: 0, opacity: 1, filter: "blur(0px)", duration: 0.55, ease: "power3.out", stagger: 0.28 }, 0.3);
-      tl.to("#cap-hook .line", { opacity: 0, scale: 1.08, filter: "blur(8px)", duration: 0.3, ease: "power2.in" }, 2.7);
+      tl.fromTo("#cap-hook .line", { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 0.4);
+      tl.to("#cap-hook .line", { opacity: 0, duration: 0.3, ease: "power1.in" }, 2.7);
 
       // S2 peek: punch-in + Psst bubble pop
       tl.fromTo("#v-peek", { scale: 1.18, x: -40 }, { scale: 1.06, x: 0, duration: 2.4, ease: "power2.out" }, 3.0);
       tl.fromTo("#psst", { scale: 0, rotation: -12, transformOrigin: "20% 100%" },
-        { scale: 1, rotation: 0, duration: 0.45, ease: "back.out(2.6)" }, 3.3);
-      tl.to("#psst", { rotation: 4, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 3.8);
+        { scale: 1, rotation: 0, duration: 0.35, ease: "power2.out" }, 3.3);
       tl.to("#psst", { scale: 0, opacity: 0, duration: 0.2, ease: "power2.in" }, 5.15);
       caption("#cap-peek", 3.55, 1.85, 0.1);
 
@@ -421,17 +376,13 @@
       });
       tl.fromTo(["#bar-l", "#bar-r"], { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.out" }, 10.45);
       tl.fromTo("#kicker", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.8, ease: "power3.out" }, 10.4);
-      tl.fromTo(hl1, { y: 120, opacity: 0, rotationX: -70 }, { y: 0, opacity: 1, rotationX: 0, duration: 0.6, ease: "back.out(1.6)", stagger: 0.05 }, 10.55);
-      tl.fromTo(hl2, { y: 120, opacity: 0, rotationX: -70 }, { y: 0, opacity: 1, rotationX: 0, duration: 0.6, ease: "back.out(1.6)", stagger: 0.045 }, 10.85);
+      tl.fromTo(hl1, { y: 120, opacity: 0, rotationX: -70 }, { y: 0, opacity: 1, rotationX: 0, duration: 0.6, ease: "power3.out", stagger: 0.04 }, 10.55);
+      tl.fromTo(hl2, { y: 120, opacity: 0, rotationX: -70 }, { y: 0, opacity: 1, rotationX: 0, duration: 0.6, ease: "power3.out", stagger: 0.035 }, 10.85);
       (function () {
         const p = document.getElementById("swoosh");
         const len = p.getTotalLength();
         tl.fromTo(p, { strokeDasharray: len, strokeDashoffset: len }, { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut" }, 11.5);
       })();
-      ["#sp1", "#sp2", "#sp3", "#sp4"].forEach((id, i) => {
-        tl.fromTo(id, { scale: 0, rotation: -90, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.5, ease: "back.out(3)" }, 10.6 + i * 0.18);
-        tl.to(id, { scale: 0.55, opacity: 0.6, duration: 0.6, yoyo: true, repeat: 2, ease: "sine.inOut" }, 11.2 + i * 0.18);
-      });
       tl.to("#title", { scale: 1.04, duration: 3.0, ease: "none" }, 10.6);
 
       // page-turn wipe: a sheet sweeps right-to-left over the cut at 13.8
@@ -444,8 +395,8 @@
       // S7–S10 kinetic words: letters slam in, gold rule draws, subline slides up
       function kinetic(sel, vid, t, push) {
         tl.fromTo(vid, { scale: push ? 1.0 : 1.15 }, { scale: push ? 1.15 : 1.0, duration: 2.4, ease: "none" }, t);
-        tl.fromTo(sel + " .ch", { scale: 2.4, opacity: 0, filter: "blur(14px)" },
-          { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.35, ease: "power4.out", stagger: 0.035 }, t + 0.05);
+        tl.fromTo(sel + " .big", { y: 30, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, t + 0.1);
         tl.fromTo(sel + " .rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power3.out" }, t + 0.35);
         tl.fromTo(sel + " .sub", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, t + 0.5);
         tl.to(sel, { opacity: 0, scale: 0.92, duration: 0.22, ease: "power2.in" }, t + 2.15);
@@ -460,21 +411,17 @@
       tl.fromTo("#info-head", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 26.0);
       tl.fromTo("#info-loc", { x: -1200 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.2);
       tl.fromTo("#info-time", { x: -800 }, { x: 0, duration: 0.6, ease: "power4.out" }, 26.7);
-      tl.fromTo("#info-loc svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2.5)" }, 26.5);
-      tl.fromTo("#info-time svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(2.5)" }, 27.0);
+      tl.fromTo("#info-loc svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.4, ease: "power2.out" }, 26.5);
+      tl.fromTo("#info-time svg", { scale: 0, rotation: -30 }, { scale: 1, rotation: 0, duration: 0.4, ease: "power2.out" }, 27.0);
       tl.to(["#info-head", "#info-loc", "#info-time"], { opacity: 0, x: -40, duration: 0.3, stagger: 0.05, ease: "power2.in" }, 30.15);
 
       // S12 end card
       tl.fromTo("#frame3", { scale: 1.08, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.8, ease: "power3.out" }, 30.6);
       tl.fromTo("#end-pre", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 30.7);
-      tl.fromTo("#end-logo", { scale: 0.85, opacity: 0, filter: "blur(10px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.8, ease: "power3.out" }, 31.0);
+      tl.fromTo("#end-logo", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }, 31.0);
       tl.fromTo("#end-lw", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.8, ease: "power3.out" }, 31.3);
-      tl.fromTo("#end-cta", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2.2)" }, 31.9);
-      tl.to("#end-cta", { scale: 1.06, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 32.6);
+      tl.fromTo("#end-cta", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power2.out" }, 31.9);
       tl.fromTo("#end-meta", { y: 20, opacity: 0 }, { y: 0, opacity: 0.85, duration: 0.5, ease: "power2.out" }, 32.3);
-      ["#sp5", "#sp6"].forEach((id, i) => {
-        tl.fromTo(id, { scale: 0, rotation: -90 }, { scale: 1, rotation: 0, duration: 0.5, ease: "back.out(3)" }, 31.2 + i * 0.2);
-      });
       tl.to("#end", { opacity: 0, duration: 0.8, ease: "power1.in" }, 34.6);
 
       window.__timelines = window.__timelines || {};
