@@ -107,3 +107,21 @@ npm run check                      # lint, runtime, layout, contrast
 # FINAL, only after approval:
 # npx hyperframes render -q delivery -o renders/beyond-the-pages-teaser.mp4
 ```
+
+## Alternate cut: CapCut vibes + Canva-style animation (`compositions/capcut-vibes.html`)
+
+Same footage, music, beat grid and timing as v4 (35.64 s). `index.html` (v4) is unchanged.
+
+- **CapCut-style effects:** punchy colour grade (contrast/saturation), zoom-blur transitions,
+  camera shake on hits, white flash cuts, glitch bars + RGB split at the title, beat bounce on
+  every beat (0.48 s) in the montage, whip-pan out of the title, a light leak at the info scene
+  and the end card.
+- **CapCut auto-caption look:** heavy white Montserrat with a black stroke, word-by-word pop, and
+  the key word in a yellow sticker box (SECRET, YET?, STORY).
+- **Canva-style text animations:** Typewriter (hook and end-card date), Pop ("Psst…" sticker,
+  cards, CTA), Block reveal (title, logo), Stomp (EXPLORE / DISCOVER / GET LOST / UNCOVER, with
+  outline echo rows), Rise (kicker, title lines), Breathe (CTA pulse).
+- **SFX:** adds glitch, bass hit, swipe and shutter (`tools/synth_sfx_capcut.py`) on top of the
+  existing set, 24 cues in total.
+
+Render: `npx hyperframes render -c compositions/capcut-vibes.html -q delivery -o renders/beyond-the-pages-capcut.mp4`
