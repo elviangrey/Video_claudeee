@@ -3,3 +3,5 @@ renders/
 *.mp4.tmp
 .hyperframes/
 exports/
+__pycache__/
+*.pyc
